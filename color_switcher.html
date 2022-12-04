@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" href="./assets/icons/tab_icon.svg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Switcher</title>
+</head>
+<div class="game">
+    <div class="gameOnSnow" style="position: relative">
+        <canvas class="snowEffectGame" id="snowEffectGame"></canvas>
+        <div class="numMoves" id="numMoves">手数: 0</div>
+        <div class="stopWatch" id="stopWatch">経過時間: 00:00:00</div>
+        <div class="boardIdDesk" id="boardIdDesk">ゲームID: g000000000000</div>
+        <div class="container">
+            <!--display: inline block makes the div width fit with text itself (omg literally the thing behind all my problems lmao)-->
+            <div class="title" style="font-size: 5vh; display: inline-block">
+                <color style="color: #43FFF4">Color</color>_Switcher
+            </div>
+            <div class="grid-wrapper", id="gridWrapper">
+            </div>
+            <div class="boardIdMobile" id="boardIdMobile">ゲームID: g000000000000</div>
+        </div>
+        <div class="game_to_opt" id="game_to_option">
+            <img class="opt_icon" id="opt_icon" src="./assets/icons/options_icon.svg">
+        </div>
+        <div class="triggerBGM" id="triggerBGM">
+            <img class="triggerBGM_icon" id="triggerBGM_icon" src="./assets/icons/bgm_icon.svg">
+        </div>
+        <div class="triggerSFX" id="triggerSFX">
+            <img class="triggerSFX_icon" id="triggerSFX_icon" src="./assets/icons/sfx_icon.svg">
+        </div>
+        <div class="triggerStats" id="triggerStats">
+            <img class="triggerStats_icon" id="triggerStats_icon" src="./assets/icons/statsOff_icon.svg">
+        </div>
+        <div class="game_return" id="game_return" style="text-align: right; font-size: 4vh">もどる</div>
+    </div>
+</div>
+
+<div class="win">
+    <div class="winOnSnow">
+        <canvas class="snowEffectWin" id="snowEffectWin"></canvas>
+        <div class="wincont">
+            <div class="win_message">Congratulations!<br>You <color style="color: #43FFF4">WIN!</color></div>
+            <div class="win_stats" id="win_stats"></div>
+        </div>
+        <div class="win_return" id="win_return" style="text-align: right; font-size: 4vh">もどる</div>
+    </div>
+</div>
+
+<div class="options">
+    <div class="optOnSnow">
+        <canvas class="snowEffectOpt" id="snowEffectOpt"></canvas>
+        <div class="opt_title" style="font-size: 7vh">オプション</div>
+        <div class="optWrapper">
+            <div class="opt_bgm" style="text-align: left">BGM:
+                <input class="bgmSlider" id="bgmSlider" type="range" min="0" max="100" value="50">
+            </div><br>
+            <div class="opt_sfx" id="sfxSlider" style="text-align: left">SE:
+                <input class="sfxSlider" id="sfxSlider" type="range" min="0" max="100" value="50">
+            </div><br>
+            <div class="opt_gamedim" style="text-align: left">マス目:</div>
+            <div class="opt_gamedimWrapper">
+                <div class="opt_gamedimButton" id="gameDim3">3 x 3</div>
+                <div class="opt_gamedimButton" id="gameDim4" style="background-color:#43FFF4; color:#307483;">4 x 4</div>
+                <div class="opt_gamedimButton" id="gameDim5">5 x 5</div>
+                <div class="opt_gamedimButton" id="gameDim6">6 x 6</div>
+                <div class="opt_gamedimButton" id="gameDim7">7 x 7</div>
+                <div class="opt_gamedimButton" id="gameDim8">8 x 8</div>
+            </div>
+        </div>
+        <div class="opt_return" id="opt_return" style="text-align: right; font-size: 4vh">もどる</div>
+    </div>
+</div>
+
+<div class="about">
+    <div class="abtOnSnow">
+        <canvas class="snowEffectAbt" id="snowEffectAbt"></canvas>
+        <div class="abt_title" style="font-size: 7vh">アバウト</div>
+        <div class="abtWrapper">
+            <img class="abt_icon" id="abt_icon" src="./assets/icons/about_icon.svg">
+            <div class="abt_desc">
+                このパズルは米国のベイエリア数学オリンピックで出題された問題が元となっています。
+                これを知って「え？これって数学なの！？」と思った方が多いのではないでしょうか？
+                元の問題では、4x4マスの場合、どんな色の配置からスタートしても必ず全ての色を合わせられることを証明しなければいけません。
+                4x4マスの場合、色の初期配置は全部で65536通りあります。この量に比べ、なぜ絶対に合わせられることが言えるのでしょう？
+                <br><br>
+                これが数学の力です。
+                <br><br>
+                話を少し変えますが、「数学」とはそもそも何なのでしょうか？
+                
+                人類は歴史上で不思議な問題を色々考えてきました。そして、その中で最も根本的な問題は論理のみで解決できることが知られていました。
+                さらに、それらの問題の解決法は単に一つずつ散らばっているのではなく、連結していて、全く別の問題層にも適用することが知られていました。
+    
+                なお、「数学」と呼ばれているものはこのような最も根本的な「問題」の集まりから発生した考えや知識です。
+                
+                数学を楽しむには自分が面白いと思った問題を深く考えることが大事です。そして、面白い問題を必死に考えることで、数学的思考が育ちます。
+                <br><br>
+                数学オリンピックとは言え、この問題の解答は実は小学生でも理解できるようなものです。学校で習った難しい公式や定理は一切必要ありません。
+                是非、考えてみて数学を堪能してみてください!
+                <br><br>
+                <!--ちなみに、4x4マスの場合の解き方が分かれば、偶数x偶数マスの場合の解き方も全て分かります。
+                あと、実は奇数x奇数の場合はまだ考え中です。予想だと解けない配置があるとは思うのですが、証明するのに時間がかかりそうです。。。-->
+            </div>
+        </div>
+        <div class="abt_return" id="abt_return" style="text-align: right; font-size: 4vh">もどる</div>
+    </div>
+</div>
+
+<div class="credits">
+    <div class="credOnSnow">
+        <canvas class="snowEffectCred" id="snowEffectCred"></canvas>
+        <div class="cred_title" style="font-size: 7vh">クレジット</div>
+        <div class="credWrapper">
+            <img class="cred_icon" id="cred_icon" src="./assets/icons/credits_icon.svg">
+            <div class="cred_desc" id="cred_desc">
+                どうも、RoKuluroと申します。この度「<b><color style="color: #43FFF4">Color</color>_Switcher</b>」をプレイしていただきありがとうございます。
+                今企画は式変形チャンネルのYouTube動画をGoya Hidekiさんと相談しながら作り上げたものです。
+                このパズルの解答も動画で解説されているので、興味がある方は<a href="https://www.youtube.com/channel/UCd_xorYtl-M6coWUkwGV_Lw" target="_blank" style="text-decoration: none">こちらのリンク</a>から視聴してみてください。
+                <br><br>
+                「<b><color style="color: #43FFF4">Color</color>_Switcher</b>」はほぼ自作です。BGMなども一応自分で作曲してみました。もしこの企画が面白いと思った方は是非、僕の活動をフォローしてみてください！
+                ネット歴はまだ浅いですが、YouTube活動を始めようと思っているのでツイッターなどをフォローして頂けると嬉しいです。（あまり呟いてはいませんが。。。）
+                <br><br>
+                リンク：<br>
+                Twitter: <a href="https://twitter.com/rklr096" target="_blank">https://twitter.com/rklr096</a><br>
+                YouTube: <a href="https://www.youtube.com/channel/UCLJuY-Fm3AOV7YCTJ465zew" target="_blank" >https://www.youtube.com/channel/UCLJuY-Fm3AOV7YCTJ465zew</a><br>
+                Github: <a href="https://github.com/RoKuluro96" target="_blank">https://github.com/RoKuluro96</a><br>
+                Pixiv: <a href="https://www.pixiv.net/en/users/26831824" target="_blank">https://www.pixiv.net/en/users/26831824</a><br>
+            </div>
+        </div>
+        <div class="cred_return" id="cred_return" style="text-align: right; font-size: 4vh">もどる</div>
+    </div>
+</div>
+
+<div class="intro" id="intro">
+    <div class="titleOnSnow" style="position: relative">
+        <canvas class="snowEffectMain" id="snowEffectMain"></canvas>
+        <div class="ts">
+            <div class="ts_title"><color style="color: #43FFF4">Color</color>_Switcher</div>
+            <div class="pressAny">画面をクリックあるいはタップで続行</div>
+            <div class="ts_options">
+                <div id="ts_opt1">ゲームスタート</div>
+                <div id="ts_opt2">オプション</div>
+                <div id="ts_opt3">アバウト</div>
+                <div id="ts_opt4">クレジット</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,822 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.4vw;
+}
+
+
+/*GAME*/
+.game{
+    background-color: #041c2b;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #c8ff00;*/
+}
+
+.boardIdDesk{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    font-size: 2.5vh;
+    top: 2.5vh;
+    right: 2.5vh;
+    text-align: center;
+    position: absolute;
+    background: none;
+    cursor: default;
+    display: none;
+    color: #C5FFFF;
+    /*background-color: #7700ff;*/
+}
+
+.boardIdMobile{
+    display: none;
+}
+
+.numMoves{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    font-size: 2.5vh;
+    top: 2.5vh;
+    left: 2.5vh;
+    text-align: center;
+    position: absolute;
+    background: none;
+    cursor: default;
+    display: none;
+    color: #C5FFFF;
+    /*background-color: #7700ff;*/
+}
+
+.stopWatch{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    font-size: 2.5vh;
+    top: 7.5vh;
+    left: 2.5vh;
+    text-align: center;
+    position: absolute;
+    background: none;
+    cursor: default;
+    display: none;
+    color: #C5FFFF;
+    /*background-color: #7700ff;*/
+}
+
+.container{
+    display: inline-block;
+    text-align: center;
+    background-color: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background-color: #64ffb1;*/
+}
+
+.title{
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+    color: #C5FFFF;
+    background: none;
+    padding-bottom: 7%;
+    cursor: default;
+    text-shadow: 0.25vh 0.15vh 0.1vh #FF39A4;
+    /*background-color: #7700ff;*/
+}
+
+.grid-wrapper{
+    background-color: #307483;
+    margin: 0 auto;
+    padding: 0;
+    width: 45vh;
+    height: 45vh;
+    display: grid;
+    box-shadow: 0.45vh 0.35vh rgba(0,0,0,0.75);
+    justify-content: center;
+    align-content: center;
+}
+
+.game_return{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    bottom: 2.5vh;
+    right: 2.5vh;
+    text-align: center;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #C5FFFF;
+    /*background-color: #7700ff;*/
+}
+
+.game_return:hover{
+    opacity: 0.7;
+}
+
+.game_to_opt{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    bottom: 2vh;
+    left: 2.5vh;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #C5FFFF;
+    max-width: 100%;
+    transform: scale(1);
+    /*background-color: #7700ff;*/
+}
+
+.opt_icon{
+    width: 100%; 
+    height: 100%;
+}
+
+.game_to_opt:hover{
+    opacity: 0.7;
+}
+
+.triggerBGM{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    bottom: 2vh;
+    left: 10.5vh;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #C5FFFF;
+    max-width: 100%;
+    transform: scale(1);
+    /*background-color: #7700ff;*/
+}
+
+.triggerBGM_icon{
+    width: 100%; 
+    height: 100%;
+}
+
+.triggerBGM:hover{
+    opacity: 0.7;
+}
+
+.triggerSFX{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    bottom: 2vh;
+    left: 18.5vh;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #C5FFFF;
+    max-width: 100%;
+    transform: scale(1);
+}
+
+.triggerSFX_icon{
+    width: 100%; 
+    height: 100%;
+}
+
+.triggerSFX:hover{
+    opacity: 0.7;
+}
+
+.triggerStats{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    bottom: 2vh;
+    left: 26.7vh;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #C5FFFF;
+    max-width: 100%;
+    transform: scale(1);
+}
+
+.triggerStats_icon{
+    width: 100%; 
+    height: 100%;
+}
+
+.triggerStats:hover{
+    opacity: 0.7;
+}
+
+/*OPTIONS*/
+.options{
+    text-align: center;
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+    color: #C5FFFF;
+
+    position: fixed;
+    background-color: #041c2b;
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+}
+
+.opt_title{
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+    height: 10%;
+    width: 100%;
+    top: 5%;
+    left: 0%;
+    position: absolute;
+    background: none;
+    cursor: default;
+    text-shadow: 0.3vh 0.2vh 0.1vh #FF39A4;
+    /*background-color: #7700ff;*/
+}
+
+.optWrapper{
+    color: #C5FFFF;
+    height: 60%;
+    width: 80%;
+    top: 20%;
+    left: 10%;
+    font-size: 4vh;
+    font-weight: normal;
+    cursor: default;
+    position: absolute;
+}
+
+.opt_gamedimWrapper{
+    width: 100%;
+    height: 50%;
+    margin-top: auto;
+    padding: 0;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: repeat(2, 40%);
+    grid-template-columns: repeat(3, 30%);
+    grid-gap: 5%;
+    /*background-color: blue;*/
+}
+
+.opt_gamedimButton{
+    background-color: #307483;
+    color: #C5FFFF;
+    border-radius: 1vh;
+    text-align: center;
+    margin-top: auto;
+    padding: 2%;
+    cursor: pointer;
+    box-shadow: 0.5vh 0.15vh 0.1vh #C5FFFF;
+}
+
+.opt_gamedimButton:hover{
+    opacity: 0.7;
+}
+
+.opt_return{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    bottom: 4vh;
+    right: 9%;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    /*background-color: #7700ff;*/
+}
+
+.opt_return:hover{
+    opacity: 0.7;
+}
+
+/*Options Sliders*/
+.bgmSlider, .sfxSlider{
+    width: 100%;
+    height: 1vh;
+    appearance: none;
+    outline: none;
+    border-radius: 0.8vh;
+    opacity: 1;
+    background: #307483;
+}
+
+.bgmSlider:hover, .sfxSlider:hover{
+    opacity: 0.7;
+}
+
+.bgmSlider::-webkit-slider-thumb, .sfxSlider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2.7vh;
+    height: 2.7vh;
+    border-radius: 50%;
+    background: #C5FFFF;
+    cursor: pointer;
+}
+
+.bgmSlider::-moz-range-thumb, .sfxSlider::-moz-range-thumb{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #C5FFFF;
+    cursor: pointer;
+}
+
+
+/*ABOUT*/
+.about{
+    text-align: center;
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+    color: #C5FFFF;
+
+    position: fixed;
+    background-color: #041c2b;
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+}
+
+.abt_title{
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+    height: 10%;
+    width: 100%;
+    top: 5%;
+    left: 0%;
+    position: absolute;
+    background: none;
+    cursor: default;
+    text-shadow: 0.3vh 0.2vh 0.1vh #FF39A4;
+    /*background-color: #7700ff;*/
+}
+
+.abtWrapper{
+    color: #C5FFFF;
+    height: 60%;
+    width: 80%;
+    top: 18%;
+    left: 10%;
+    font-size: 2vh;
+    font-weight: normal;
+    cursor: default;
+    position: absolute;
+}
+
+.abt_icon{
+    padding-bottom: 3.5vh;
+    /*width: 10vh;*/
+    max-width: 100%;
+    height: auto;
+}
+
+.abt_desc{
+    text-align: left;
+}
+
+.abt_return{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    bottom: 4vh;
+    right: 10%;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    /*background-color: #7700ff;*/
+}
+
+.abt_return:hover{
+    opacity: 0.7;
+}
+
+/*CREDITS*/
+.credits{
+    text-align: center;
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+    color: #C5FFFF;
+
+    position: fixed;
+    background-color: #041c2b;
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+}
+
+.cred_title{
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+    height: 10%;
+    width: 100%;
+    top: 5%;
+    left: 0%;
+    position: absolute;
+    background: none;
+    cursor: default;
+    text-shadow: 0.3vh 0.2vh 0.1vh #FF39A4;
+    /*background-color: #7700ff;*/
+}
+
+.credWrapper{
+    color: #C5FFFF;
+    height: 60%;
+    width: 80%;
+    top: 18%;
+    left: 10%;
+    font-size: 2vh;
+    font-weight: normal;
+    cursor: default;
+    position: absolute;
+    text-align: center;
+}
+
+.cred_icon{
+    padding-bottom: 3.5vh;
+    /*width: 10vh;*/
+    max-width: 100%;
+    height: auto;
+}
+
+.cred_desc{
+    text-align: left;
+}
+
+.cred_return{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    bottom: 4vh;
+    right: 10%;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    /*background-color: #7700ff;*/
+}
+
+.cred_return:hover{
+    opacity: 0.7;
+}
+
+
+/*INTRO TITLE SCREEN*/
+.intro{
+    text-align: center;
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+    color: #C5FFFF;
+
+    position: fixed;
+    background-color: #041c2b;
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
+    /*center alignment*/
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ts{
+    display: grid;
+    /*justify-items are good for when we have multiple divs with distinct "text-length"*/
+    justify-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background-color: green;*/
+}
+
+.ts_title{
+    /*fonts are better with vw*/
+    font-weight: bold;
+    padding-bottom: 2%;
+    font-size: 10vh;
+    /*default font-size: 10vh*/
+    word-wrap: normal;
+    text-shadow: 0.3vh 0.2vh 0.1vh #FF39A4;
+    cursor: default;
+    /*background-color: #FF7269;*/
+}
+
+.pressAny{
+    opacity: 1;
+    cursor: default;
+    padding-top: 1%;
+    font-size: 2vh;
+    font-weight: normal;
+}
+
+/*fix this copy + paste mess (linked to fade transition after pressany)*/
+.ts_options{
+    font-size: 2vh;
+    font-weight: normal;
+    cursor: pointer;
+    padding-top: 1vh;
+    justify-content: center;
+    opacity: 1;
+    display: none;
+    grid-gap: 1.5vh;
+    /*background-color: #23ff6c;*/
+}
+
+#ts_opt1:hover, #ts_opt2:hover, #ts_opt3:hover, #ts_opt4:hover{
+    color: #8ababf;
+}
+
+
+/*WIN SCREEN*/
+.win{
+    text-align: center;
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+    color: #C5FFFF;
+    position: fixed;
+    background-color: #041c2b;
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+}
+
+.wincont{
+    /*justify-items are good for when we have multiple divs with distinct "text-length"*/
+    justify-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.win_message{
+    font-size: 9vh;
+    text-shadow: 0.3vh 0.2vh 0.1vh #FF39A4;
+    cursor: default;
+}
+
+.win_stats{
+    font-size: 2vh;
+    font-weight: normal;
+    padding-top: 2vw;
+    justify-content: center;
+    opacity: 1;
+    cursor: default;
+}
+
+.win_return{
+    font-family: Century Gothic, sans-serif;
+    font-weight: normal;
+    bottom: 2.5vh;
+    right: 2.5vh;
+    text-align: center;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #C5FFFF;
+    /*background-color: #7700ff;*/
+}
+
+.win_return:hover{
+    opacity: 0.7;
+}
+
+a:link{
+    color: #43FFF4;
+}
+
+a:visited{
+    color: #43FFF4;
+}
+
+a:hover{
+    color: #32D2C9;
+}
+
+@media only screen and (max-width: 740px) {
+    .boardIdDesk{
+        opacity: 0;
+        display: none;
+    }
+    
+    .boardIdMobile{
+        font-family: Century Gothic, sans-serif;
+        font-weight: normal;
+        font-size: 2.5vh;
+        color: #C5FFFF;
+        background: none;
+        cursor: default;
+        padding-top: 7%;
+        display: none;
+        /*text-shadow: 0.25vh 0.15vh 0.1vh #FF39A4;*/
+    }
+
+    .ts_title{
+        /*fonts are better with vw*/
+        font-weight: bold;
+        padding-bottom: 2%;
+        font-size: 5.5vh;
+        /*default font-size: 10vh*/
+        word-wrap: normal;
+        text-shadow: 0.2vh 0.1vh 0.1vh #FF39A4;
+        cursor: default;
+        /*background-color: #FF7269;*/
+    }
+
+    .pressAny{
+        opacity: 1;
+        cursor: default;
+        padding-top: 1%;
+        font-size: 1.5vh;
+        font-weight: normal;
+    }
+
+    .ts_options{
+        font-size: 1.5vh;
+        font-weight: normal;
+        cursor: pointer;
+        padding-top: 1vh;
+        justify-content: center;
+        opacity: 1;
+        display: none;
+        grid-gap: 1.5vh;
+        /*background-color: #23ff6c;*/
+    }
+
+    .win_message{
+        font-size: 5.5vh;
+        text-shadow: 0.2vh 0.1vh 0.1vh #FF39A4;
+        cursor: default;
+    }
+    
+    .win_stats{
+        font-size: 1.5vh;
+        font-weight: normal;
+        padding-top: 2vw;
+        justify-content: center;
+        opacity: 1;
+        cursor: default;
+    }
+}
+
+@media only screen and (max-width: 1158px) {
+    .abtWrapper{
+        color: #C5FFFF;
+        height: 60%;
+        width: 80%;
+        top: 16%;
+        left: 10%;
+        font-size: 1.6vh;
+        font-weight: normal;
+        cursor: default;
+        position: absolute;
+    }
+
+    .abt_icon{
+        padding-bottom: 2vh;
+    }
+
+    .abt_desc{
+        text-align: left;
+        font-size: 1.48vh;
+    }
+
+    .credWrapper{
+        color: #C5FFFF;
+        height: 60%;
+        width: 80%;
+        top: 16%;
+        left: 10%;
+        font-size: 1.6vh;
+        font-weight: normal;
+        cursor: default;
+        position: absolute;
+    }
+
+    .cred_icon{
+        padding-bottom: 2vh;
+        /*width: 10vh;*/
+    }
+
+    .cred_desc{
+        text-align: left;
+    }
+}
+
+/*ANIMATIONS*/
+@keyframes slideUpDesk{
+    0%{
+        transform: translateY(45%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideUpMobile{
+    0%{
+        transform: translateY(70%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes selectFlashBlue{
+    0%{
+        background-color: #C5FFFF;
+    }
+    50%{
+        background-color: #307483;
+    }
+    100%{
+        background-color: #43FFF4;
+    }
+}
+
+@keyframes selectFlashBlueHover{
+    0%{
+        background-color: #9AE8E8; 
+    }
+    50%{
+        background-color: #307483;
+    }
+    100%{
+        background-color: #32D2C9;
+    }
+}
+
+@keyframes selectFlashGreen{
+    0%{
+        background-color: #43FFF4;
+    }
+    50%{
+        background-color: #307483;
+    }
+    100%{
+        background-color: #C5FFFF;
+    }
+}
+
+@keyframes selectFlashGreenHover{
+    0%{
+        background-color: #32D2C9; 
+    }
+    50%{
+        background-color: #307483;
+    }
+    100%{
+        background-color: #9AE8E8;
+    }
+}
