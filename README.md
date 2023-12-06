@@ -8,7 +8,7 @@ version. The text is in Japanese, but hopefully, the interface is intuitive
 enough to grok.
 
 The game comes from a simple math olympiad
-[problem](https://aops.com/community/p7622138) I found long ago.
+[problem](https://aops.com/community/p7622138) I found a long time ago.
 The idea is to invent an algorithm to make all the cells in the grid reach the
 same parity (color in the case of *Color Switcher*, key direction in the case
 of the math problem).
